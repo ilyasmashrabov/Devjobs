@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="light.css">
+    <title>Devjobs</title>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <img class="img-fluid" src="img/devjobs.svg" alt="">
+        </div>
+        <div>
+            <span class="material-symbols-outlined">light_mode</span>
+            <div class="toggle-switch">
+                <input type="checkbox" id="switch" class="switch-input btn">
+                <label for="switch" class="switch-label"></label>
+                <span class="switch-handle"></span>
+            </div>
+            <span class="material-symbols-outlined">dark_mode</span>
+        </div>
+    </div>
+
+    <div class="navbar-search">
+        <div class="">
+            <span class="material-symbols-outlined">search<input type="search" placeholder="Filter by title, companies, expertise…"></span>
+        </div>
+        <div class="">
+            <div class="wrapper">
+                <div class="select-btn">
+                    <span class="material-symbols-outlined">location_on</span>
+                  <span>Filter by location…</span>
+                  <i class="uil uil-angle-down"></i>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    <i class="uil uil-search"></i>
+                    <input spellcheck="false" type="text" placeholder="Search">
+                  </div>
+                  <ul class="options"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-search-info">
+            <input type="checkbox">
+            <h6>Full Time Only</h6>
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div id="information1" class="cards">
+
+    </div>
+    <div id="information2" class="cards">
+
+    </div>
+    <button onclick="myFunction()" id="loadMore" class="more-button">Load More</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <div class="wrapper">
+    <div class="select-btn">
+        <span>Filter by location…</span>
+        <i class="uil uil-angle-down"></i>
+    </div>
+    <div class="content">
+        <div class="search">
+        <i class="uil uil-search"></i>
+        <input spellcheck="false" type="text" placeholder="Search">
+        </div>
+        <ul class="options"></ul>
+    </div>
+</div> -->
+
+<!-- <div class="card">
+    <img class="img-fluid" src="img/icon-1.svg" alt="">
+    <div class="card-info">
+        <p>5h ago . Full Time</p>
+        <h5>Senior Software Engineer</h5>
+        <p>Scoot</p>
+        <h6>United Kingdom</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-2.svg" alt="">
+    <div class="card-info">
+        <p>20h ago . Part Time</p>
+        <h5>Haskell and PureScript Dev</h5>
+        <p>Blogr</p>
+        <h6>United States</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-3.svg" alt="">
+    <div class="card-info">
+        <p>1d ago . Part Time</p>
+        <h5>Midlevel Back End Engineer</h5>
+        <p>Vector</p>
+        <h6>Russia</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-4.svg" alt="">
+    <div class="card-info">
+        <p>2d ago . Full Time</p>
+        <h5>Senior Application Engineer</h5>
+        <p>Office Lite</p>
+        <h6>Japan</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-5.svg" alt="">
+    <div class="card-info">
+        <p>2d ago . Part Time</p>
+        <h5>Remote DevOps Engineer</h5>
+        <p>Pod</p>
+        <h6>Thailand</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-6.svg" alt="">
+    <div class="card-info">
+        <p>4d ago . Part Time</p>
+        <h5>Desktop Support Manager</h5>
+        <p>Creative</p>
+        <h6>Germany</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-7.svg" alt="">
+    <div class="card-info">
+        <p>1w ago . Full Time</p>
+        <h5>iOS Engineer</h5>
+        <p>Pomodoro</p>
+        <h6>United States</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-8.svg" alt="">
+    <div class="card-info">
+        <p>1w ago . Full Time</p>
+        <h5>Senior EJB Developer</h5>
+        <p>Maker</p>
+        <h6>United Kingdom</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-9.svg" alt="">
+    <div class="card-info">
+        <p>1w ago . Part Time</p>
+        <h5>Senior Frontend Developer</h5>
+        <p>Coffeeroasters</p>
+        <h6>Singapore</h6>
+    </div>
+</div>
+<div class="card">
+    <img class="img-fluid" src="img/icon-10.svg" alt="">
+    <div class="card-info">
+        <p>2w ago . Freelance</p>
+        <h5>App & Website Designer</h5>
+        <p>Mastercraft</p>
+        <h6>United States</h6>
+    </div>
+</div>        
+<div class="card">
+    <img class="img-fluid" src="img/icon-11.svg" alt="">
+    <div class="card-info">
+        <p>1mo ago . Part Time</p>
+        <h5>Fullstack Developer</h5>
+        <p>Crowdfund</p>
+        <h6>New Zealand</h6>
+    </div>
+</div>        
+<div class="card">
+    <img class="img-fluid" src="img/icon-12.svg" alt="">
+    <div class="card-info">
+        <p>4d ago . Part Time</p>
+        <h5>Technical Lead Engineer</h5>
+        <p>Typemaster</p>
+        <h6>United Kingdom</h6>
+    </div>
+</div> -->

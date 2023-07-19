@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Search Dropdown</title>
+</head>
+<body>
+  <input type="text" id="search-input" placeholder="Search">
+  <div id="search-results"></div>
+
+  <style>
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-results {
+      max-height: 300px;
+      overflow: hidden;
+    }
+
+    .search-results li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .search-results li:hover {
+      text-transform: capitalize;
+    }
+  </style>
+
+  <script>
+    $(function() {
+      // When the user types in the search input, filter the search results.
+      $("#search-input").on("keyup", function() {
+        var searchTerm = $(this).val();
+        var searchResults = $("#search-results");
+
+        // Clear the search results.
+        searchResults.empty();
+
+        // If the search term is not empty, filter the products.
+        if (searchTerm != "") {
+          var products = [
+            {
+              name: "Product 1",
+              price: 100
+            },
+            {
+              name: "Product 2",
+              price: 200
+            },
+            {
+              name: "Product 3",
+              price: 300
+            }
+          ];
+
+          // Find the products that match the search term.
+          var filteredProducts = products.filter(function(product) {
+            return product.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
+          });
+
+          // Add the filtered products to the search results.
+          filteredProducts.forEach(function(product) {
+            searchResults.append("<li>" + product.name + "</li>");
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
